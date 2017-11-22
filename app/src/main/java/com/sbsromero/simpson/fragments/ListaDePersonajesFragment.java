@@ -3,6 +3,7 @@ package com.sbsromero.simpson.fragments;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -17,6 +18,7 @@ import android.view.ViewGroup;
 
 import com.sbsromero.simpson.R;
 import com.sbsromero.simpson.utils.AdaptadorDePersonaje;
+import com.sbsromero.simpson.utils.Util;
 import com.sbsromero.simpson.vo.Personaje;
 
 import java.util.ArrayList;
@@ -58,7 +60,7 @@ public class ListaDePersonajesFragment extends Fragment implements AdaptadorDePe
 
         adaptador = new AdaptadorDePersonaje(personajes,this);
         listadoPersonajes.setAdapter(adaptador);
-        listadoPersonajes.setLayoutManager(new LinearLayoutManager(getContext(),LinearLayoutManager.HORIZONTAL, false));
+        listadoPersonajes.setLayoutManager(new LinearLayoutManager(getContext(),LinearLayoutManager.VERTICAL, false));
     }
 
     @Override
@@ -92,6 +94,14 @@ public class ListaDePersonajesFragment extends Fragment implements AdaptadorDePe
             personajes.set(1,personajes.get(2));
             personajes.set(2, aux);
             adaptador.notifyItemMoved(1, 2);
+        }
+        if (id == R.id.menu_idioma){
+            Util.cambiarIdioma(getContext());
+            Intent intent = getActivity().getIntent();
+            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP |
+                    Intent.FLAG_ACTIVITY_NEW_TASK);
+            getActivity().finish();
+            startActivity(intent);
         }
         return super.onOptionsItemSelected(item);
     }

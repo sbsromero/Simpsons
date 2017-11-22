@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="nombre_app">Personajes</string>
+    <string name="agregar_personaje">Agregar personaje</string>
+    <string name="modificar_personaje">Edit character</string>
+    <string name="modificar_posicion">Modificar posición</string>
+    <string name="eliminar_personaje">Eliminar personaje</string>
+    <string name="cambiar_idioma">Cambiar idioma</string>
+    <string name="lenguaje_app">Es</string>
+    <string name="ver_video">See video</string>
+</resources>

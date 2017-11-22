@@ -13,6 +13,7 @@ import com.sbsromero.simpson.R;
 import com.sbsromero.simpson.fragments.DetalleDePersonajeFragment;
 import com.sbsromero.simpson.fragments.ListaDePersonajesFragment;
 import com.sbsromero.simpson.utils.AdaptadorDePersonaje;
+import com.sbsromero.simpson.utils.Util;
 import com.sbsromero.simpson.vo.Personaje;
 
 import java.util.ArrayList;
@@ -27,9 +28,13 @@ public class SimpsonActivity extends AppCompatActivity implements ListaDePersona
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Util.obtenerLenguaje(this);
         setContentView(R.layout.activity_simpson);
         personajes = new ArrayList();
         personajes.add(new Personaje("Sebas",new Date()));
+        personajes.add(new Personaje("Simpson1",new Date()));
+        personajes.add(new Personaje("Simpson2",new Date()));
+        personajes.add(new Personaje("Simpson3",new Date()));
         ListaDePersonajesFragment listaDePersonajesFragment = (ListaDePersonajesFragment)
                 getSupportFragmentManager().findFragmentById(R.id.fragmento_lista_personajes);
         listaDePersonajesFragment.setPersonajes(personajes);

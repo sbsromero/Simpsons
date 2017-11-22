@@ -2,7 +2,6 @@
     <string name="app_name">Simpson</string>
 
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="texto_detalle_de_personaje">Homer Jay Simpson (Homero Jay
 Simpson en Hispanoamérica), más conocido como Homer Simpson (Homero Simpson
 en Hispanoamérica), es un personaje ficticio protagonista de la serie de
@@ -16,4 +15,12 @@ capítulo «Doh-in In the Wind» Homer descubre que su segundo nombre es Jay
 (nombre en inglés de la letra j); de este modo, cuando Homer pronuncia en
 inglés su propio nombre, no se distingue si da la letra inicial del segundo
 nombre o este al completo.</string>
+    <string name="nombre_app">Personajes</string>
+    <string name="agregar_personaje">Add character</string>
+    <string name="modificar_personaje">Modificar Personaje</string>
+    <string name="modificar_posicion">Modify position</string>
+    <string name="eliminar_personaje">Delete character</string>
+    <string name="cambiar_idioma">Change language</string>
+    <string name="lenguaje_app">En</string>
+    <string name="ver_video">Ver video</string>
 </resources>
